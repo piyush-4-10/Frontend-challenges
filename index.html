@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechMart – Popular Products</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+
+  <div class="wrap">
+    <header class="top">
+      <div>
+        <p class="kicker"><span class="dot"></span> TechMart · Product Explorer</p>
+        <h1>🔥 Popular <span>Products</span></h1>
+        <p class="lead">Ranked by <b>rating × reviews</b>. Only the best K are tracked with a min-heap, so there is no full sort.</p>
+      </div>
+
+      <div class="controls">
+        <label class="picker" for="kSelect">
+          <span>Show Top:</span>
+          <select id="kSelect">
+            <option value="3" selected>3</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+          </select>
+        </label>
+
+        <label class="picker" for="dataSelect">
+          <span>Data:</span>
+          <select id="dataSelect">
+            <option value="0" selected>22 products</option>
+            <option value="100000">100,000 generated</option>
+            <option value="1000000">1,000,000 generated</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <div class="statsbar">
+      <p id="stats" class="stats" aria-live="polite"></p>
+      <button id="compareBtn" class="ghost">⚡ Compare with full sort</button>
+    </div>
+
+    <div id="error" class="error hidden"></div>
+    <noscript><p class="error">Please enable JavaScript.</p></noscript>
+
+    <main id="popularGrid" class="grid"></main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
